@@ -37,7 +37,7 @@ func (t *EMFTestRunner) Validate() status.TestGroupResult {
 		testResults[i] = t.validateEMFMetric(metricName)
 	}
 
-	testResults = append(testResults, validateEMFLogs("MetricValueBenchmarkTest", awsservice.GetInstanceId()))
+	testResults = append(testResults, validateEMFLogs("ccwa-validation", awsservice.GetInstanceId()))
 
 	return status.TestGroupResult{
 		Name:        t.GetTestName(),
@@ -61,7 +61,7 @@ func (t *EMFTestRunner) SetupAfterAgentRun() error {
 	// for times in  {1..3}
 	//  do
 	//   CURRENT_TIME=$(date +%s%N | cut -b1-13)
-	//   echo '{"_aws":{"Timestamp":'"${CURRENT_TIME}"',"LogGroupName":"MetricValueBenchmarkTest","CloudWatchMetrics":[{"Namespace":"MetricValueBenchmarkTest","Dimensions":[["Type","InstanceId"]],"Metrics":[{"Name":"EMFCounter","Unit":"Count","InstanceId":"'"${INSTANCEID}"'"}]}]},"Type":"Counter","EMFCounter":5}' \ > /dev/udp/0.0.0.0/25888
+	//   echo '{"_aws":{"Timestamp":'"${CURRENT_TIME}"',"LogGroupName":"ccwa-validation","CloudWatchMetrics":[{"Namespace":"ccwa-validation","Dimensions":[["Type","InstanceId"]],"Metrics":[{"Name":"EMFCounter","Unit":"Count","InstanceId":"'"${INSTANCEID}"'"}]}]},"Type":"Counter","EMFCounter":5}' \ > /dev/udp/0.0.0.0/25888
 	//   sleep 60
 	// done
 	startEMFCommands := []string{

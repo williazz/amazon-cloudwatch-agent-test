@@ -4,7 +4,7 @@
       "Id": "m1",
       "MetricStat": {
         "Metric": {
-          "Namespace": "MetricValueBenchmarkTest",
+          "Namespace": "ccwa-validation",
           "MetricName": "procstat_memory_swap",
           "Dimensions": [
             {

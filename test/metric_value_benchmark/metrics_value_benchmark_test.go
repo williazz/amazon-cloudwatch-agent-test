@@ -20,7 +20,7 @@ import (
 	"github.com/aws/amazon-cloudwatch-agent-test/test/test_runner"
 )
 
-const namespace = "MetricValueBenchmarkTest"
+const namespace = "ccwa-validation"
 
 type MetricBenchmarkTestSuite struct {
 	suite.Suite

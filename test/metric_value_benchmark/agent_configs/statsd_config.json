@@ -1,6 +1,6 @@
 {
     "metrics": {
-        "namespace": "MetricValueBenchmarkTest",
+        "namespace": "ccwa-validation",
         "append_dimensions": {
             "InstanceId": "${aws:InstanceId}"
         },

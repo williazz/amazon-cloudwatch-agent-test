@@ -11,7 +11,7 @@
         "prometheus_config_path": "/tmp/prometheus_config.yaml",
         "log_group_name": "prometheus_test",
         "emf_processor": {
-          "metric_namespace": "MetricValueBenchmarkTest",
+          "metric_namespace": "ccwa-validation",
           "metric_declaration": [
             {
               "source_labels": [
